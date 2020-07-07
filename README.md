@@ -12,7 +12,7 @@ Visualizations based on open geodata
 
 #### Air quality index info
 Source: https://www.eea.europa.eu/themes/air/air-quality-index
-![](openaq/info/air quality index eea.png)
+![](openaq/info/air_quality_index_eea.png)
 
 #### AWS Glue/Athena tables and views
 * **default.openaq** table:  
