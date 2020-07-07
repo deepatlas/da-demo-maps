@@ -47,8 +47,7 @@ Example can be found here (in public access): https://da-demo-maps.s3-eu-west-1.
 #### Steps
 
 **1) Get data:**  
-* In AWS Athena run the following query:  
-```select * from default.openaq_germany_2017_to_now_for_kepler;```
+  In AWS Athena run the following query: ```select * from default.openaq_germany_2017_to_now_for_kepler;```
 
 **2) Save result data as .csv**  
 
@@ -77,19 +76,18 @@ NO2 vs PM10:
 ![NO2 vs PM10](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler2_no2_vs_pm10.png)
 
 PM10 vs PM25:
-![PM10 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany kepler3_pm10_vs_pm25.png)
+![PM10 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler3_pm10_vs_pm25.png)
 
 ### Tableau visualization
 Tableau example can be found here: https://da-demo-maps.s3-eu-west-1.amazonaws.com/openaq/tableau/config/openaq_germany.twbx
 
-For creating/editing visualizations Tableau Desktop app was used.
+For creating/editing visualizations Tableau Desktop app was used.  
 For reading Tableau Reader app can be used.
 
 #### Steps
 
 **1) Get data:**  
-* In AWS Athena run the following query:  
-```select * from default.openaq_germany_2017_to_now_for_tableau;```
+  In AWS Athena run the following query: ```select * from default.openaq_germany_2017_to_now_for_tableau;```
 
 **2) Save result data as .csv**  
 
