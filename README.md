@@ -12,7 +12,7 @@ Visualizations based on open geodata
 
 #### Air quality index info
 Source: https://www.eea.europa.eu/themes/air/air-quality-index
-![](openaq/info/air_quality_index_eea.png)
+![](openaq/info/air_quality_index_by_eea.png)
 
 #### AWS Glue/Athena tables and views
 * **default.openaq** table:  
@@ -71,13 +71,13 @@ Example can be found here (in public access): https://da-demo-maps.s3-eu-west-1.
 
 #### Screenshots
 NO2 vs PM25:
-![NO2 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany kepler 1 no2 vs pm25.png)
+![NO2 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler1_no2_vs_pm25.png)
 
 NO2 vs PM10:
-![NO2 vs PM10](openaq/viz-tools/kepler/screenshots/openaq_germany kepler 2 no2 vs pm10.png)
+![NO2 vs PM10](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler2_no2_vs_pm10.png)
 
 PM10 vs PM25:
-![PM10 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany kepler 3 pm10 vs pm25.png)
+![PM10 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany kepler3_pm10_vs_pm25.png)
 
 ### Tableau visualization
 Tableau example can be found here: https://da-demo-maps.s3-eu-west-1.amazonaws.com/openaq/tableau/config/openaq_germany.twbx
@@ -106,10 +106,10 @@ There are 4 tabs:
 * 3 table views.
 
 #### Screenshots
-![](openaq/viz-tools/tableau/screenshots/openaq_germany tableau 1.png)
+![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau1.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany tableau 2.png)
+![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau2.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany tableau 3.png)
+![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau3.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany tableau 4.png)
+![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau4.png)
