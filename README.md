@@ -31,11 +31,11 @@ Source: https://www.eea.europa.eu/themes/air/air-quality-index
 * **default.openaq_germany_2017_to_now_for_kepler** view:  
   is based on default.openaq_germany_2017_to_now view and contains data prepared for kepler.gl:
   * data is grouped by day, country, city, location, latitude, longitude, averagingperiod_value, averagingperiod_unit, attribution_name, attribution_url, sourcename, sourcetype, mobile;
-  * there are 2 new calculated columns per row: '{parameter}_avg_value' and '{parameter}_avg_index' (calculated as per table above).
+  * there are 10 new calculated columns per row (2 columns for each parameter): '{parameter}_avg_value' and '{parameter}_avg_index' (calculated as per table above).
 
 * **default.openaq_germany_2017_to_now_for_tableau** view:  
   is based on default.openaq_germany_2017_to_now view and default.state_boundaries_germany table and contains data prepared for Tableau:
-  * there is a new column 'state' which points to federal state where combination of latitude and longitude belongs to.
+  * there is a new calculated column 'state' which points to federal state where combination of latitude and longitude belongs to.
 
 ## Visualization tools
   * kepler.gl: https://kepler.gl/
@@ -53,7 +53,7 @@ Example can be found here (in public access): https://da-demo-maps.s3-eu-west-1.
 
 **3) Load data in kepler.gl**
 
-**4) Customize map:**
+**4) Customize map ([config screenshots](openaq/viz-tools/kepler/config/)):**
 * Filters:
   * day
 * Layers:
