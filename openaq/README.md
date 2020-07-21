@@ -11,7 +11,7 @@ Air quality data visualizations with kepler.gl and Tableau
 
 #### Air quality index info
 Source: https://www.eea.europa.eu/themes/air/air-quality-index
-![](openaq/info/air_quality_index_by_eea.png)
+![](info/air_quality_index_by_eea.png)
 
 #### AWS Glue/Athena tables and views
 * **default.openaq** table:  
@@ -52,7 +52,7 @@ Example can be found here (in public access): https://da-demo-maps.s3-eu-west-1.
 
 **3) Load data in kepler.gl**
 
-**4) Customize map ([config screenshots](openaq/viz-tools/kepler/config/)):**
+**4) Customize map ([config screenshots](viz-tools/kepler/config/)):**
 * Filters:
   * day
 * Layers:
@@ -69,13 +69,13 @@ Example can be found here (in public access): https://da-demo-maps.s3-eu-west-1.
 
 #### Screenshots
 NO2 vs PM25:
-![NO2 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler1_no2_vs_pm25.png)
+![NO2 vs PM25](viz-tools/kepler/screenshots/openaq_germany_kepler1_no2_vs_pm25.png)
 
 NO2 vs PM10:
-![NO2 vs PM10](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler2_no2_vs_pm10.png)
+![NO2 vs PM10](viz-tools/kepler/screenshots/openaq_germany_kepler2_no2_vs_pm10.png)
 
 PM10 vs PM25:
-![PM10 vs PM25](openaq/viz-tools/kepler/screenshots/openaq_germany_kepler3_pm10_vs_pm25.png)
+![PM10 vs PM25](viz-tools/kepler/screenshots/openaq_germany_kepler3_pm10_vs_pm25.png)
 
 ### Tableau visualization
 Tableau example can be found here: https://da-demo-maps.s3-eu-west-1.amazonaws.com/openaq/tableau/config/openaq_germany.twbx
@@ -94,7 +94,7 @@ For reading Tableau Reader app can be used.
 Tableau Desktop application is used.
 
 **4) Create visualizations:**
-* add a new calculated field [avg_index](openaq/viz-tools/tableau/config/calculated%20fields)
+* add a new calculated field [avg_index](viz-tools/tableau/config/calculated%20fields)
 * add filters
 * add marks
 
@@ -103,10 +103,10 @@ There are 4 tabs:
 * 3 table views.
 
 #### Screenshots
-![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau1.png)
+![](viz-tools/tableau/screenshots/openaq_germany_tableau1.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau2.png)
+![](viz-tools/tableau/screenshots/openaq_germany_tableau2.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau3.png)
+![](viz-tools/tableau/screenshots/openaq_germany_tableau3.png)
 
-![](openaq/viz-tools/tableau/screenshots/openaq_germany_tableau4.png)
+![](viz-tools/tableau/screenshots/openaq_germany_tableau4.png)
