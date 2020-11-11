@@ -115,5 +115,4 @@ select
 
   from aq
   join aq_states aqs
-    on aq.longitude = aqs.longitude and aq.latitude = aqs.latitude
- order by day;
+    on aq.longitude = aqs.longitude and aq.latitude = aqs.latitude;
