@@ -1,18 +1,17 @@
 create or replace view default.openaq_germany_2017_to_now_for_tableau as
 with aq_coordinates as (
-select
-      longitude
-    , latitude
-  from default.openaq_germany_2017_to_now
- group by
-      longitude
-    , latitude
+     select
+            longitude
+          , latitude
+      from default.openaq_germany_2017_to_now
+     group by longitude
+            , latitude
 )
 , aq_states as (
-select
-        aq.longitude
-      , aq.latitude
-      , sb.state
+     select
+            aq.longitude
+          , aq.latitude
+          , sb.state
   from aq_coordinates aq
  cross join default.state_boundaries_germany sb
  where st_contains(ST_POLYGON(state_boundaries_wkt), ST_POINT(aq.longitude, aq.latitude))
