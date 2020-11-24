@@ -13,6 +13,31 @@ Air quality data visualizations with kepler.gl and Tableau
 Source: https://www.eea.europa.eu/themes/air/air-quality-index
 ![](info/air_quality_index_by_eea.png)
 
+#### AWS Athena
+"Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run." [https://aws.amazon.com/athena]
+
+Athena supports geospatial queries: https://docs.aws.amazon.com/athena/latest/ug/querying-geospatial-data.html
+
+Athena works with input data in these data formats:
+* WKT (Well-known Text). In Athena, WKT is represented as a varchar data type.
+* JSON-encoded geospatial data. The Hive JSON SerDe is used by Athena.
+
+Athena supports the following geometry data types:
+* point
+* line
+* multiline
+* polygon
+* multipolygon
+
+Athena works with many geospatial functions:
+* ST_POINT
+* ST_POLYGON
+* ST_CONTAINS
+* ST_INTERSECTS
+* ST_BUFFER
+* and many more: https://docs.aws.amazon.com/athena/latest/ug/geospatial-functions-list.html
+
+
 #### AWS Glue/Athena tables and views
 * **default.openaq** table:  
   is linked to s3://openaq-fetches/realtime-gzipped AWS S3 bucket (source 1)) and contains realtime gzipped data in ndjson.gz format.
@@ -30,11 +55,13 @@ Source: https://www.eea.europa.eu/themes/air/air-quality-index
 * **default.openaq_germany_2017_to_now_for_kepler** view:  
   is based on default.openaq_germany_2017_to_now view and contains data prepared for kepler.gl:
   * data is grouped by day, country, city, location, latitude, longitude, averagingperiod_value, averagingperiod_unit, attribution_name, attribution_url, sourcename, sourcetype, mobile;
-  * there are 10 new calculated columns per row (2 columns for each parameter): '{parameter}_avg_value' and '{parameter}_avg_index' (calculated as per table above).
+  * there are 11 new calculated columns per row:
+    * 2 columns for each parameter: '{parameter}_avg_value' and '{parameter}_avg_index' (calculated as per table above);
+    * column 'state' which points to federal state where combination of latitude and longitude belongs to. Geospatial functions are used for that: ST_Contains function checks which air quality station locations (described by ST_POINT(longitude, latitude)) are in each federal state (described by ST_POLYGON(state_boundaries_wkt)).
 
 * **default.openaq_germany_2017_to_now_for_tableau** view:  
   is based on default.openaq_germany_2017_to_now view and default.state_boundaries_germany table and contains data prepared for Tableau:
-  * there is a new calculated column 'state' which points to federal state where combination of latitude and longitude belongs to.
+  * there is a new calculated column 'state' which points to federal state where combination of latitude and longitude belongs to. Geospatial functions are used for that: ST_Contains function checks which air quality station locations (described by ST_POINT(longitude, latitude)) are in each federal state (described by ST_POLYGON(state_boundaries_wkt)).
 
 ## Visualization tools
   * kepler.gl: https://kepler.gl/
